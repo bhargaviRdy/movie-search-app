@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>moviesearch</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <script src="script.js"></script>
+    <body>
+        <nav class="navbar navbar-light bg-info fixed-top ">
+            <div class="container justify-content-center">
+                <span class="navbar-brand h1">Movie Search Application</span>
+
+            </div>
+        </nav>
+        <div class="container ">
+            <div class="form-group row justify-content-center" id="searchbar">
+                <div class="col-12 col-sm-4 align-self-center">
+                    <input type="text" class="form-control" id="tofind" name="movie" placeholder="Search for movie">
+                </div>
+                <div class="col-12 col-sm-2 align-self-center">
+                    <button type="submit" class="btn btn-primary" onclick="findmovie(document.getElementById('tofind').value)">Search</button>
+                </div>
+            </div>
+            
+            <div class="row" >
+                <div class="col-12 col-md-9" >
+                    <form id="results">
+
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt=""> -->
+
+        </div>
+       
+    </body>
+</html>
