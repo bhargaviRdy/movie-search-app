@@ -12,38 +12,55 @@ function findmovie(movie){
     request.onload= function(){
         var data = JSON.parse(this.response);
         if (request.status >= 200 && request.status < 400){
+
+            const h3=document.createElement('h3');
+            h3.setAttribute('class','col-sm-12 col-form-label');
+            h3.textContent='You have searched for \" '+movie+" \" ";
+            fid.appendChild(h3);
            
             console.log(data);
-                   
+
             for(var k in data){
                 var v=data[k];
                 if(k=='Response' && v=='False'){
                     const r=document.createElement('label');
-                    r.setAttribute('class','col-md-10 col-form-label');
+                    r.setAttribute('class','col-md-12 col-form-label ');
                     r.textContent=" \" "+movie+" \" " +" is not found ";
                     fid.appendChild(r);
                     break;
                 }
 
+                var d=document.createElement('div');
+                d.setAttribute('class','row ');
+                fid.appendChild(d);
 
-                if (k=='Poster' || k=='Ratings'){
-                    // const i=document.createElement('img');
-                    // i.setAttribute('src','k');
-                    // i.setAttribute('alt','Poster');
-                    // fid.appendChild(i);
+                if (k=='Poster'){
+                    const i=document.createElement('img');
+                    i.setAttribute('class','col-12 col-sm-12 img-thumbnail');
+                    i.setAttribute('src',v);
+                    i.setAttribute('alt','Poster');
+                    i.setAttribute('style','align:center;');
+                    // i.setAttribute('max-width','100%');
+                    // i.setAttribute('width','200');
+                    // i.setAttribute('height','100');
+                    d.appendChild(i);
                 }
-                else{
+            }
+                   
+            for(var k in data){
+                var v=data[k];
+                if(k!='Poster' && k!='Ratings'){
                 
                     const r=document.createElement('label');
-                    r.setAttribute('class','col-md-2 col-form-label');
+                    r.setAttribute('class','col-md-3 col-form-label');
                     r.textContent=k;
 
                     const r2=document.createElement('label');
-                    r2.setAttribute('class','col-md-10 col-form-label');
+                    r2.setAttribute('class','col-md-9 col-form-label');
                     r2.textContent=v;
 
-                    fid.appendChild(r);
-                    fid.appendChild(r2);
+                    d.appendChild(r);
+                    d.appendChild(r2);
                 }
             }
 
