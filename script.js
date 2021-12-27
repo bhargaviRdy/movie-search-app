@@ -17,7 +17,7 @@ async function getMovieData(movie){
     )
     .then(json => {
         res.innerText = json.Released;
-        // output.innerText = "hello"
+        // output.innerText = "hello"emo
         console.log(json);
         // return json;
     })
