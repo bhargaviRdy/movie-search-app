@@ -13,36 +13,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     </head>
-    <script src="script.js"></script>
     <body>
-        <nav class="navbar navbar-light bg-info fixed-top ">
-            <div class="container justify-content-center">
-                <span class="navbar-brand h1">Movie Search Application</span>
-
-            </div>
-        </nav>
-        <div class="container ">
-            <div class="form-group row justify-content-center" id="searchbar">
-                <div class="col-12 col-sm-4 align-self-center">
-                    <input type="text" class="form-control" id="tofind" name="movie" placeholder="Search for movie">
-                </div>
-                <div class="col-12 col-sm-2 align-self-center">
-                    <button type="submit" class="btn btn-primary" onclick="findmovie(document.getElementById('tofind').value)">Search</button>
-                </div>
-            </div>
-            
-            <div class="row" >
-                <div class="col-12 col-md-9" >
-                    <form id="results">
-
-
-                    </form>
-                </div>
-            </div>
-
-            <!-- <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt=""> -->
+        <div class="header">
+            Movie Search Application
+        </div>
+        <div class="searchbar">
+            <input type="text" name="moviename" id="moviename">
+            <button type="submit" id="search"> Search</button>
+        </div>
+        <div class="randommovies">
 
         </div>
+        <div class="results">
+
+        </div>
+
+
+            <!-- <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt=""> -->
+            <script src="script.js"></script>
+
        
     </body>
 </html>
