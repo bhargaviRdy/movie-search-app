@@ -35,9 +35,12 @@ body{
 
 
 @media screen and (max-width: 600px) {
-    
+    .searchbar{
+        display: inline-block;
+        margin-top: 1rem;
+    }
     .results{
-        margin: 1rem 3.5rem 3.5rem 3.5rem;
+        margin: 1rem 3.5rem 2rem 3.5rem;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -53,6 +56,12 @@ body{
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+    
+}
+.movie .poster{
+    width: 240px;
+    height:300px;
+    border-radius: 5px;
 }
 .movie{
     display: block;
@@ -65,11 +74,7 @@ body{
     background-color: #00000080;
 }
 
-.movie .poster{
-    width: 240px;
-    height:300px;
-    border-radius: 5px;
-}
+
 
 .movie .title{
     color: var(--primary-color);
