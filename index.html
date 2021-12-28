@@ -3,31 +3,19 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>moviesearch</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="styles.css">
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
     </head>
     <body>
         <div class="header">
-            Movie Search Application
+            <span>Movie Search Application</span> 
+            <span class="searchbar">
+                <input type="text" class="fa" name="moviename" id="moviename" placeholder="&#xF002; search">
+            </span>
         </div>
-        <div class="searchbar">
-            <input type="text" name="moviename" id="moviename">
-            <button type="submit" id="search"> Search</button>
-        </div>
-        <div class="randommovies">
-
-        </div>
-        <div class="results">
-
-        </div>
-
-
-            <!-- <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt=""> -->
-            <script src="script.js"></script>
-
-       
+        <div class="results"></div>
+        <script src="script.js"></script>
     </body>
 </html>
